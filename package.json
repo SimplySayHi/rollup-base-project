@@ -1,0 +1,46 @@
+{
+    "name": "rollup-base-project",
+    "title": "Rollup Base Project",
+    "description": "The basic structure to start a JavaScript project with Rollup",
+    "version": "1.0.0",
+    "main": "dist/index.min.js",
+    "module": "dist/index-esm.min.js",
+    "homepage": "https://github.com/SimplySayHi/rollup-base-project",
+    "author": {
+        "email": "sayhi@valeriodipunzio.com",
+        "name": "Valerio Di Punzio",
+        "url": "https://valeriodipunzio.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/SimplySayHi/rollup-base-project.git"
+    },
+    "keywords": [
+        "rollup",
+        "base",
+        "project",
+        "javascript"
+    ],
+    "bugs": {
+        "url": "https://github.com/SimplySayHi/rollup-base-project/issues"
+    },
+    "license": "MIT",
+    "scripts": {
+        "build": "rollup --config"
+    },
+    "devDependencies": {
+        "@babel/core": "^7.8.7",
+        "@babel/preset-env": "^7.8.7",
+        "@rollup/plugin-node-resolve": "^7.1.1",
+        "rollup": "^2.1.0",
+        "rollup-plugin-babel": "^4.4.0",
+        "rollup-plugin-terser": "^5.3.0"
+    },
+    "customData": {
+        "libraryNamespace": "RollupTest",
+        "repository": {
+            "accountName": "SimplySayHi",
+            "homepage": "https://github.com/SimplySayHi/rollup-base-project"
+        }
+    }
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rollup Base Project - Test Page</title>
+</head>
+<body>
+
+    <!-- IMPORT ES MODULE - WAY 1 -->
+    <script type="module">
+        import RollupTest from './dist/index-esm.min.js';
+        console.log('JS Loaded: ESM');
+        console.log('RollupTest', RollupTest);
+        const RT = new RollupTest( 5, 'Valerio' );
+        console.log( 'RT', RT );
+    </script>
+
+    <!-- IMPORT ES MODULE - WAY 2 -->
+    <!-- <script type="module" src="dist/index-esm.min.js"></script> -->
+
+    <!-- LOAD UMD TRANSPILED SCRIPT WHEN ES MODULES ARE NOT SUPPORTED BY THE BROWSER -->
+    <!-- REMOVE nomodule WHEN USING ONLY UMD TRANSPILED SCRIPT -->
+    <script nomodule src="dist/index.min.js"></script>
+    <script nomodule>
+        console.log('JS Loaded: UMD');
+        console.log('RollupTest', RollupTest);
+        const RT = new RollupTest( 5, 'Valerio' );
+        console.log( 'RT', RT );
+    </script>
+    
+</body>
+</html>
