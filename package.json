@@ -38,6 +38,7 @@
     },
     "customData": {
         "libraryNamespace": "RollupTest",
+        "libraryFileName": "index",
         "repository": {
             "accountName": "SimplySayHi",
             "homepage": "https://github.com/SimplySayHi/rollup-base-project"

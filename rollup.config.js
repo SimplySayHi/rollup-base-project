@@ -6,6 +6,7 @@ import myPackage from './package.json';
 
 const initialComment = `/* ${myPackage.title} v${myPackage.version} | ${myPackage.author.name} (@${myPackage.customData.repository.accountName}) | ${myPackage.homepage} | ${myPackage.customData.repository.homepage} | ${myPackage.license} license */`;
 
+const libraryFileName = myPackage.customData.libraryFileName;
 const libraryNamespace = myPackage.customData.libraryNamespace;
 
 const
@@ -15,7 +16,7 @@ optionsESM = {
 
         // ES MODULE
         {
-            file: 'dist/index-esm.js',
+            file: `dist/${libraryFileName}-esm.js`,
             format: 'es',
             plugins: [
                 terser({
@@ -31,7 +32,7 @@ optionsESM = {
 
         // ES MODULE MINIFIED
         {
-            file: 'dist/index-esm.min.js',
+            file: `dist/${libraryFileName}-esm.min.js`,
             format: 'es',
             plugins: [
                 terser({
@@ -52,7 +53,7 @@ optionsUMD = {
 
         // UMD TRANSPILED SCRIPT
         {
-            file: 'dist/index.js',
+            file: `dist/${libraryFileName}.js`,
             format: 'umd',
             name: libraryNamespace,
             plugins: [
@@ -69,7 +70,7 @@ optionsUMD = {
 
         // UMD TRANSPILED SCRIPT MINIFIED
         {
-            file: 'dist/index.min.js',
+            file: `dist/${libraryFileName}.min.js`,
             format: 'umd',
             name: libraryNamespace,
             plugins: [
